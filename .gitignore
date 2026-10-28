@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and Virtual Environments
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# PyTorch / Hugging Face models & checkpoints
+checkpoints/
+artifacts/models/
+artifacts/checkpoints/
+*.pt
+*.bin
+*.safetensors
+*.onnx
+
+# Data files (keep README and metadata)
+data/cache/
+data/raw/
+*.tar.gz
+*.zip
+
+# Streamlit
+.streamlit/
+
+# OS specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp
+*.log
+scratch/
+tmp/

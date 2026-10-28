@@ -1,0 +1,82 @@
+# Knowledge Distillation for Citation-Intent Classification Configuration
+seed: 42
+deterministic: true
+device: "auto"  # 'auto', 'cuda', or 'cpu'
+
+dataset:
+  name: "scicite"
+  text_col: "string"
+  label_col: "label"
+  id_col: "id"
+  max_length: 128
+  class_names: ["method", "background", "result"]
+  minority_class_id: 2
+  max_train_samples: null
+  max_val_samples: null
+  max_test_samples: null
+
+training:
+  teacher:
+    model_name: "allenai/scibert_scivocab_uncased"
+    alias: "SciBERT-Teacher"
+    batch_size: 16
+    epochs: 3
+    learning_rate: 2.0e-5
+    weight_decay: 0.01
+    warmup_ratio: 0.1
+    early_stopping_patience: 2
+    gradient_accumulation_steps: 1
+    max_grad_norm: 1.0
+
+  students:
+    distilbert:
+      model_name: "distilbert-base-uncased"
+      alias: "DistilBERT"
+      batch_size: 16
+      epochs: 4
+      learning_rate: 3.0e-5
+      weight_decay: 0.01
+      warmup_ratio: 0.1
+    bert_mini:
+      model_name: "prajjwal1/bert-mini"
+      alias: "BERT-Mini"
+      batch_size: 16
+      epochs: 4
+      learning_rate: 5.0e-5
+      weight_decay: 0.01
+      warmup_ratio: 0.1
+    bert_tiny:
+      model_name: "prajjwal1/bert-tiny"
+      alias: "BERT-Tiny"
+      batch_size: 16
+      epochs: 4
+      learning_rate: 5.0e-5
+      weight_decay: 0.01
+      warmup_ratio: 0.1
+
+distillation:
+  temperature: 3.0
+  alpha: 0.6  # alpha * KD + (1 - alpha) * CE
+  feature_distill:
+    weight: 0.5
+    loss_type: "mse"  # 'mse' or 'cosine'
+    student_layer: -1
+    teacher_layer: -1
+  augmentation:
+    perturbation_types: ["whitespace_normalize", "punctuation_tweak", "token_swap"]
+
+evaluation:
+  benchmark_runs: 25
+  warmup_runs: 5
+  batch_sizes: [1, 8, 16]
+  perturbations:
+    - "whitespace_normalize"
+    - "minor_punctuation"
+    - "typo_insertion"
+
+paths:
+  artifacts_dir: "artifacts"
+  results_dir: "results"
+  checkpoints_dir: "artifacts/checkpoints"
+  cache_dir: "artifacts/cache"
+  logs_dir: "artifacts/logs"
