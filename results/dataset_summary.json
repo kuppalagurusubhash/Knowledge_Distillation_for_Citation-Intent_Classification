@@ -1,0 +1,109 @@
+{
+  "splits": {
+    "train": {
+      "total_samples": 800,
+      "label_distribution": {
+        "background": {
+          "count": 473,
+          "percentage": 59.13
+        },
+        "method": {
+          "count": 221,
+          "percentage": 27.62
+        },
+        "result": {
+          "count": 106,
+          "percentage": 13.25
+        }
+      },
+      "word_length": {
+        "mean": 33.26,
+        "median": 30.5,
+        "std": 20.08,
+        "p95": 53.05,
+        "min": 9,
+        "max": 429
+      },
+      "char_length": {
+        "mean": 215.87,
+        "median": 199.5
+      }
+    },
+    "validation": {
+      "total_samples": 200,
+      "label_distribution": {
+        "background": {
+          "count": 117,
+          "percentage": 58.5
+        },
+        "method": {
+          "count": 56,
+          "percentage": 28.0
+        },
+        "result": {
+          "count": 27,
+          "percentage": 13.5
+        }
+      },
+      "word_length": {
+        "mean": 35.02,
+        "median": 32.0,
+        "std": 18.18,
+        "p95": 54.45,
+        "min": 10,
+        "max": 148
+      },
+      "char_length": {
+        "mean": 226.53,
+        "median": 205.5
+      }
+    },
+    "test": {
+      "total_samples": 300,
+      "label_distribution": {
+        "background": {
+          "count": 161,
+          "percentage": 53.67
+        },
+        "method": {
+          "count": 97,
+          "percentage": 32.33
+        },
+        "result": {
+          "count": 42,
+          "percentage": 14.0
+        }
+      },
+      "word_length": {
+        "mean": 35.1,
+        "median": 32.0,
+        "std": 15.36,
+        "p95": 62.0,
+        "min": 16,
+        "max": 108
+      },
+      "char_length": {
+        "mean": 227.81,
+        "median": 211.0
+      }
+    }
+  },
+  "label_mapping": {
+    "0": "method",
+    "1": "background",
+    "2": "result"
+  },
+  "minority_class": {
+    "id": 2,
+    "name": "result"
+  },
+  "data_leakage_check": {
+    "train_validation_overlap_count": 1,
+    "train_test_overlap_count": 0
+  },
+  "class_weights": [
+    1.2066,
+    0.5638,
+    2.5157
+  ]
+}

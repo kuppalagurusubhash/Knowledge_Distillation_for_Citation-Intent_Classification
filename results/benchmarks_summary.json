@@ -1,0 +1,281 @@
+{
+  "models": [
+    {
+      "experiment_id": "teacher_scibert",
+      "model_alias": "SciBERT-Teacher",
+      "model_type": "teacher",
+      "method": "reference_teacher",
+      "test_accuracy": 0.8733,
+      "test_macro_f1": 0.8655,
+      "minority_f1": 0.8602,
+      "total_params": 109920771,
+      "param_size_mb": 419.31,
+      "checkpoint_size_mb": 420.24,
+      "latency_single_ms": 127.71,
+      "latency_p95_ms": 155.77,
+      "throughput_single_eps": 7.8,
+      "batch_benchmarks": {
+        "batch_1": {
+          "batch_size": 1,
+          "latency_mean_ms": 129.79,
+          "latency_median_ms": 127.71,
+          "latency_p95_ms": 155.77,
+          "throughput_examples_per_sec": 7.8,
+          "num_runs": 15
+        },
+        "batch_8": {
+          "batch_size": 8,
+          "latency_mean_ms": 762.69,
+          "latency_median_ms": 760.44,
+          "latency_p95_ms": 826.52,
+          "throughput_examples_per_sec": 10.5,
+          "num_runs": 15
+        }
+      },
+      "device": "cpu",
+      "is_pareto_size_vs_f1": false,
+      "is_pareto_latency_vs_f1": false,
+      "is_pareto_size_vs_throughput": false,
+      "is_globally_pareto": false
+    },
+    {
+      "experiment_id": "student_bert_mini_supervised",
+      "model_alias": "BERT-Mini",
+      "model_type": "student",
+      "method": "supervised",
+      "test_accuracy": 0.7933,
+      "test_macro_f1": 0.7702,
+      "minority_f1": 0.7356,
+      "total_params": 11171331,
+      "param_size_mb": 42.62,
+      "checkpoint_size_mb": 43.53,
+      "latency_single_ms": 8.93,
+      "latency_p95_ms": 10.4,
+      "throughput_single_eps": 111.9,
+      "batch_benchmarks": {
+        "batch_1": {
+          "batch_size": 1,
+          "latency_mean_ms": 9.06,
+          "latency_median_ms": 8.93,
+          "latency_p95_ms": 10.4,
+          "throughput_examples_per_sec": 111.9,
+          "num_runs": 15
+        },
+        "batch_8": {
+          "batch_size": 8,
+          "latency_mean_ms": 43.55,
+          "latency_median_ms": 38.09,
+          "latency_p95_ms": 68.78,
+          "throughput_examples_per_sec": 210.0,
+          "num_runs": 15
+        }
+      },
+      "device": "cpu",
+      "is_pareto_size_vs_f1": true,
+      "is_pareto_latency_vs_f1": true,
+      "is_pareto_size_vs_throughput": false,
+      "is_globally_pareto": true
+    },
+    {
+      "experiment_id": "student_bert_mini_logit_distillation",
+      "model_alias": "BERT-Mini",
+      "model_type": "student",
+      "method": "logit_distillation",
+      "test_accuracy": 0.7967,
+      "test_macro_f1": 0.7665,
+      "minority_f1": 0.716,
+      "total_params": 11171331,
+      "param_size_mb": 42.62,
+      "checkpoint_size_mb": 43.53,
+      "latency_single_ms": 9.37,
+      "latency_p95_ms": 10.4,
+      "throughput_single_eps": 106.7,
+      "batch_benchmarks": {
+        "batch_1": {
+          "batch_size": 1,
+          "latency_mean_ms": 9.25,
+          "latency_median_ms": 9.37,
+          "latency_p95_ms": 10.4,
+          "throughput_examples_per_sec": 106.7,
+          "num_runs": 15
+        },
+        "batch_8": {
+          "batch_size": 8,
+          "latency_mean_ms": 40.56,
+          "latency_median_ms": 35.71,
+          "latency_p95_ms": 62.71,
+          "throughput_examples_per_sec": 224.1,
+          "num_runs": 15
+        }
+      },
+      "device": "cpu",
+      "is_pareto_size_vs_f1": false,
+      "is_pareto_latency_vs_f1": false,
+      "is_pareto_size_vs_throughput": false,
+      "is_globally_pareto": false
+    },
+    {
+      "experiment_id": "student_bert_mini_augmented_distillation",
+      "model_alias": "BERT-Mini",
+      "model_type": "student",
+      "method": "augmented_distillation",
+      "test_accuracy": 0.7833,
+      "test_macro_f1": 0.7529,
+      "minority_f1": 0.716,
+      "total_params": 11171331,
+      "param_size_mb": 42.62,
+      "checkpoint_size_mb": 43.53,
+      "latency_single_ms": 8.35,
+      "latency_p95_ms": 9.05,
+      "throughput_single_eps": 119.8,
+      "batch_benchmarks": {
+        "batch_1": {
+          "batch_size": 1,
+          "latency_mean_ms": 8.3,
+          "latency_median_ms": 8.35,
+          "latency_p95_ms": 9.05,
+          "throughput_examples_per_sec": 119.8,
+          "num_runs": 15
+        },
+        "batch_8": {
+          "batch_size": 8,
+          "latency_mean_ms": 36.13,
+          "latency_median_ms": 35.46,
+          "latency_p95_ms": 38.88,
+          "throughput_examples_per_sec": 225.6,
+          "num_runs": 15
+        }
+      },
+      "device": "cpu",
+      "is_pareto_size_vs_f1": false,
+      "is_pareto_latency_vs_f1": true,
+      "is_pareto_size_vs_throughput": false,
+      "is_globally_pareto": true
+    },
+    {
+      "experiment_id": "student_bert_tiny_logit_distillation",
+      "model_alias": "BERT-Tiny",
+      "model_type": "student",
+      "method": "logit_distillation",
+      "test_accuracy": 0.5367,
+      "test_macro_f1": 0.2328,
+      "minority_f1": 0.0,
+      "total_params": 4386307,
+      "param_size_mb": 16.73,
+      "checkpoint_size_mb": 17.64,
+      "latency_single_ms": 7.48,
+      "latency_p95_ms": 10.15,
+      "throughput_single_eps": 133.7,
+      "batch_benchmarks": {
+        "batch_1": {
+          "batch_size": 1,
+          "latency_mean_ms": 7.76,
+          "latency_median_ms": 7.48,
+          "latency_p95_ms": 10.15,
+          "throughput_examples_per_sec": 133.7,
+          "num_runs": 15
+        },
+        "batch_8": {
+          "batch_size": 8,
+          "latency_mean_ms": 10.98,
+          "latency_median_ms": 8.67,
+          "latency_p95_ms": 20.75,
+          "throughput_examples_per_sec": 922.8,
+          "num_runs": 15
+        }
+      },
+      "device": "cpu",
+      "is_pareto_size_vs_f1": true,
+      "is_pareto_latency_vs_f1": true,
+      "is_pareto_size_vs_throughput": true,
+      "is_globally_pareto": true
+    },
+    {
+      "experiment_id": "student_bert_mini_feature_distillation",
+      "model_alias": "BERT-Mini",
+      "model_type": "student",
+      "method": "feature_distillation",
+      "test_accuracy": 0.7667,
+      "test_macro_f1": 0.7253,
+      "minority_f1": 0.6237,
+      "total_params": 11171331,
+      "param_size_mb": 42.62,
+      "checkpoint_size_mb": 43.53,
+      "latency_single_ms": 8.69,
+      "latency_p95_ms": 9.59,
+      "throughput_single_eps": 115.1,
+      "batch_benchmarks": {
+        "batch_1": {
+          "batch_size": 1,
+          "latency_mean_ms": 8.65,
+          "latency_median_ms": 8.69,
+          "latency_p95_ms": 9.59,
+          "throughput_examples_per_sec": 115.1,
+          "num_runs": 15
+        },
+        "batch_8": {
+          "batch_size": 8,
+          "latency_mean_ms": 37.79,
+          "latency_median_ms": 37.11,
+          "latency_p95_ms": 44.26,
+          "throughput_examples_per_sec": 215.6,
+          "num_runs": 15
+        }
+      },
+      "device": "cpu",
+      "is_pareto_size_vs_f1": false,
+      "is_pareto_latency_vs_f1": false,
+      "is_pareto_size_vs_throughput": false,
+      "is_globally_pareto": false
+    },
+    {
+      "experiment_id": "student_distilbert_logit_distillation",
+      "model_alias": "DistilBERT",
+      "model_type": "student",
+      "method": "logit_distillation",
+      "test_accuracy": 0.8867,
+      "test_macro_f1": 0.8684,
+      "minority_f1": 0.8043,
+      "total_params": 66955779,
+      "param_size_mb": 255.42,
+      "checkpoint_size_mb": 256.33,
+      "latency_single_ms": 64.59,
+      "latency_p95_ms": 67.13,
+      "throughput_single_eps": 15.5,
+      "batch_benchmarks": {
+        "batch_1": {
+          "batch_size": 1,
+          "latency_mean_ms": 64.49,
+          "latency_median_ms": 64.59,
+          "latency_p95_ms": 67.13,
+          "throughput_examples_per_sec": 15.5,
+          "num_runs": 15
+        },
+        "batch_8": {
+          "batch_size": 8,
+          "latency_mean_ms": 382.78,
+          "latency_median_ms": 383.77,
+          "latency_p95_ms": 388.12,
+          "throughput_examples_per_sec": 20.8,
+          "num_runs": 15
+        }
+      },
+      "device": "cpu",
+      "is_pareto_size_vs_f1": true,
+      "is_pareto_latency_vs_f1": true,
+      "is_pareto_size_vs_throughput": false,
+      "is_globally_pareto": true
+    }
+  ],
+  "pareto_size_vs_f1_names": [
+    "BERT-Mini",
+    "BERT-Tiny",
+    "DistilBERT"
+  ],
+  "pareto_latency_vs_f1_names": [
+    "BERT-Mini",
+    "BERT-Mini",
+    "BERT-Tiny",
+    "DistilBERT"
+  ]
+}

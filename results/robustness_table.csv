@@ -1,0 +1,8 @@
+experiment_id,model_alias,method,clean_macro_f1,clean_minority_f1,overall_robustness_score,avg_relative_degradation_pct,whitespace_normalize_f1,whitespace_normalize_deg_pct,minor_punctuation_f1,minor_punctuation_deg_pct,typo_insertion_f1,typo_insertion_deg_pct
+teacher_scibert,SciBERT-Teacher,reference_teacher,0.8655,0.8602,99.53,0.47,0.8655,0.0,0.8635,0.23,0.8552,1.19
+student_bert_mini_supervised,BERT-Mini,supervised,0.7702,0.7356,99.32,0.68,0.7702,0.0,0.7729,-0.35,0.7517,2.4
+student_bert_mini_logit_distillation,BERT-Mini,logit_distillation,0.7665,0.716,98.31,1.69,0.7665,0.0,0.761,0.72,0.7331,4.36
+student_bert_mini_augmented_distillation,BERT-Mini,augmented_distillation,0.7529,0.716,99.23,0.77,0.7529,0.0,0.7529,0.0,0.7355,2.31
+student_bert_tiny_logit_distillation,BERT-Tiny,logit_distillation,0.2328,0.0,100.0,0.0,0.2328,0.0,0.2328,0.0,0.2328,0.0
+student_bert_mini_feature_distillation,BERT-Mini,feature_distillation,0.7253,0.6237,100.15,-0.15,0.7253,0.0,0.7248,0.07,0.729,-0.51
+student_distilbert_logit_distillation,DistilBERT,logit_distillation,0.8684,0.8043,99.81,0.19,0.8684,0.0,0.8711,-0.31,0.8607,0.89

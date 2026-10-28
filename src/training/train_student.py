@@ -6,6 +6,7 @@ import time
 from pathlib import Path
 from typing import Any, Dict, Optional
 import torch
+import torch.nn as nn
 from torch.optim import AdamW
 from torch.utils.data import DataLoader
 from tqdm import tqdm

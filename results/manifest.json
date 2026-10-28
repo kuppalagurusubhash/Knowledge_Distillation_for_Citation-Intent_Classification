@@ -1,0 +1,101 @@
+{
+  "experiments": [
+    {
+      "experiment_id": "teacher_scibert",
+      "model_alias": "SciBERT-Teacher",
+      "model_type": "teacher",
+      "method": "reference_teacher",
+      "test_accuracy": 0.8733,
+      "test_macro_f1": 0.8655,
+      "minority_f1": 0.8602,
+      "total_params": 109920771,
+      "checkpoint_size_mb": 420.24,
+      "checkpoint_dir": "artifacts\\checkpoints\\teacher_scibert",
+      "status": "completed"
+    },
+    {
+      "experiment_id": "student_bert_mini_supervised",
+      "model_alias": "BERT-Mini",
+      "model_type": "student",
+      "student_key": "bert_mini",
+      "method": "supervised",
+      "test_accuracy": 0.7933,
+      "test_macro_f1": 0.7702,
+      "minority_f1": 0.7356,
+      "total_params": 11171331,
+      "checkpoint_size_mb": 43.53,
+      "checkpoint_dir": "artifacts\\checkpoints\\student_bert_mini_supervised",
+      "status": "completed"
+    },
+    {
+      "experiment_id": "student_bert_mini_logit_distillation",
+      "model_alias": "BERT-Mini",
+      "model_type": "student",
+      "student_key": "bert_mini",
+      "method": "logit_distillation",
+      "test_accuracy": 0.7967,
+      "test_macro_f1": 0.7665,
+      "minority_f1": 0.716,
+      "total_params": 11171331,
+      "checkpoint_size_mb": 43.53,
+      "checkpoint_dir": "artifacts\\checkpoints\\student_bert_mini_logit_distillation",
+      "status": "completed"
+    },
+    {
+      "experiment_id": "student_bert_mini_augmented_distillation",
+      "model_alias": "BERT-Mini",
+      "model_type": "student",
+      "student_key": "bert_mini",
+      "method": "augmented_distillation",
+      "test_accuracy": 0.7833,
+      "test_macro_f1": 0.7529,
+      "minority_f1": 0.716,
+      "total_params": 11171331,
+      "checkpoint_size_mb": 43.53,
+      "checkpoint_dir": "artifacts\\checkpoints\\student_bert_mini_augmented_distillation",
+      "status": "completed"
+    },
+    {
+      "experiment_id": "student_bert_tiny_logit_distillation",
+      "model_alias": "BERT-Tiny",
+      "model_type": "student",
+      "student_key": "bert_tiny",
+      "method": "logit_distillation",
+      "test_accuracy": 0.5367,
+      "test_macro_f1": 0.2328,
+      "minority_f1": 0.0,
+      "total_params": 4386307,
+      "checkpoint_size_mb": 17.64,
+      "checkpoint_dir": "artifacts\\checkpoints\\student_bert_tiny_logit_distillation",
+      "status": "completed"
+    },
+    {
+      "experiment_id": "student_bert_mini_feature_distillation",
+      "model_alias": "BERT-Mini",
+      "model_type": "student",
+      "student_key": "bert_mini",
+      "method": "feature_distillation",
+      "test_accuracy": 0.7667,
+      "test_macro_f1": 0.7253,
+      "minority_f1": 0.6237,
+      "total_params": 11171331,
+      "checkpoint_size_mb": 43.53,
+      "checkpoint_dir": "artifacts\\checkpoints\\student_bert_mini_feature_distillation",
+      "status": "completed"
+    },
+    {
+      "experiment_id": "student_distilbert_logit_distillation",
+      "model_alias": "DistilBERT",
+      "model_type": "student",
+      "student_key": "distilbert",
+      "method": "logit_distillation",
+      "test_accuracy": 0.8867,
+      "test_macro_f1": 0.8684,
+      "minority_f1": 0.8043,
+      "total_params": 66955779,
+      "checkpoint_size_mb": 256.33,
+      "checkpoint_dir": "artifacts\\checkpoints\\student_distilbert_logit_distillation",
+      "status": "completed"
+    }
+  ]
+}

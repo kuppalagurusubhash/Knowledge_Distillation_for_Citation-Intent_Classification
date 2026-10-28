@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "experiment_id": "student_bert_mini_feature_distillation",
+    "created_at": "2026-10-28T13:50:18.886913"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "timestamp": "2026-10-28T13:50:43.797188",
+      "train_loss": 1.237,
+      "val_loss": 0.7412,
+      "val_accuracy": 0.69,
+      "val_macro_f1": 0.5236,
+      "val_minority_f1": 0.303
+    },
+    {
+      "epoch": 2,
+      "timestamp": "2026-10-28T13:51:07.956423",
+      "train_loss": 0.8668,
+      "val_loss": 0.6597,
+      "val_accuracy": 0.745,
+      "val_macro_f1": 0.6793,
+      "val_minority_f1": 0.566
+    }
+  ],
+  "final_metrics": {
+    "model_name": "prajjwal1/bert-mini",
+    "model_alias": "BERT-Mini",
+    "model_type": "student",
+    "student_key": "bert_mini",
+    "method": "feature_distillation",
+    "checkpoint_dir": "artifacts\\checkpoints\\student_bert_mini_feature_distillation",
+    "checkpoint_size_mb": 43.53,
+    "parameters": {
+      "total_parameters": 11171331,
+      "trainable_parameters": 11171331,
+      "param_size_mb": 42.62,
+      "projector_parameters": 196608
+    },
+    "best_epoch": 2,
+    "training_time_seconds": 49.08,
+    "device": "cpu",
+    "test_metrics": {
+      "accuracy": 0.7667,
+      "macro_f1": 0.7253,
+      "weighted_f1": 0.7654,
+      "minority_class": {
+        "name": "result",
+        "id": 2,
+        "recall": 0.6905,
+        "f1_score": 0.6237,
+        "support": 42
+      },
+      "per_class": {
+        "method": {
+          "precision": 0.8592,
+          "recall": 0.6289,
+          "f1_score": 0.7262,
+          "support": 97
+        },
+        "background": {
+          "precision": 0.7865,
+          "recall": 0.8696,
+          "f1_score": 0.826,
+          "support": 161
+        },
+        "result": {
+          "precision": 0.5686,
+          "recall": 0.6905,
+          "f1_score": 0.6237,
+          "support": 42
+        }
+      },
+      "confusion_matrix": [
+        [
+          61,
+          29,
+          7
+        ],
+        [
+          6,
+          140,
+          15
+        ],
+        [
+          4,
+          9,
+          29
+        ]
+      ],
+      "total_evaluated": 300,
+      "loss": 0.5864
+    },
+    "status": "completed"
+  }
+}
