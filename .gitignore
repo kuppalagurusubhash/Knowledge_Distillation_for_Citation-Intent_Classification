@@ -15,6 +15,7 @@ htmlcov/
 checkpoints/
 artifacts/models/
 artifacts/checkpoints/
+artifacts/cache/
 *.pt
 *.bin
 *.safetensors

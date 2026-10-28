@@ -1,12 +1,12 @@
 {
   "metadata": {
     "experiment_id": "teacher_scibert",
-    "created_at": "2026-10-28T13:26:10.478137"
+    "created_at": "2026-10-28T14:25:48.365122"
   },
   "history": [
     {
       "epoch": 1,
-      "timestamp": "2026-10-28T13:33:40.097550",
+      "timestamp": "2026-10-28T14:32:21.331430",
       "train_loss": 0.6694,
       "val_loss": 0.5131,
       "val_accuracy": 0.8,
@@ -15,7 +15,7 @@
     },
     {
       "epoch": 2,
-      "timestamp": "2026-10-28T13:40:42.547531",
+      "timestamp": "2026-10-28T14:38:51.181841",
       "train_loss": 0.332,
       "val_loss": 0.5312,
       "val_accuracy": 0.815,
@@ -36,7 +36,7 @@
       "param_size_mb": 419.31
     },
     "best_epoch": 2,
-    "training_time_seconds": 872.29,
+    "training_time_seconds": 783.14,
     "device": "cpu",
     "test_metrics": {
       "accuracy": 0.8733,

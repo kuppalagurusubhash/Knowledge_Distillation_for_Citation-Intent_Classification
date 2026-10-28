@@ -1,56 +1,12 @@
 {
-  "teacher_scibert": {
-    "model_alias": "SciBERT-Teacher",
-    "method": "reference_teacher",
-    "clean_accuracy": 0.8733,
-    "clean_macro_f1": 0.8655,
-    "clean_minority_f1": 0.8602,
-    "average_relative_degradation_pct": 0.47,
-    "overall_robustness_score": 99.53,
-    "perturbations": {
-      "whitespace_normalize": {
-        "perturbed_accuracy": 0.8733,
-        "perturbed_macro_f1": 0.8655,
-        "absolute_f1_degradation": 0.0,
-        "relative_f1_degradation_pct": 0.0,
-        "robustness_retention_pct": 100.0,
-        "minority_clean_f1": 0.8602,
-        "minority_perturbed_f1": 0.8602,
-        "minority_f1_degradation": 0.0,
-        "minority_rel_deg_pct": 0.0
-      },
-      "minor_punctuation": {
-        "perturbed_accuracy": 0.8733,
-        "perturbed_macro_f1": 0.8635,
-        "absolute_f1_degradation": 0.002,
-        "relative_f1_degradation_pct": 0.23,
-        "robustness_retention_pct": 99.77,
-        "minority_clean_f1": 0.8602,
-        "minority_perturbed_f1": 0.8478,
-        "minority_f1_degradation": 0.0124,
-        "minority_rel_deg_pct": 1.44
-      },
-      "typo_insertion": {
-        "perturbed_accuracy": 0.8633,
-        "perturbed_macro_f1": 0.8552,
-        "absolute_f1_degradation": 0.0103,
-        "relative_f1_degradation_pct": 1.19,
-        "robustness_retention_pct": 98.81,
-        "minority_clean_f1": 0.8602,
-        "minority_perturbed_f1": 0.8511,
-        "minority_f1_degradation": 0.0091,
-        "minority_rel_deg_pct": 1.06
-      }
-    }
-  },
   "student_bert_mini_supervised": {
     "model_alias": "BERT-Mini",
     "method": "supervised",
     "clean_accuracy": 0.7933,
     "clean_macro_f1": 0.7702,
     "clean_minority_f1": 0.7356,
-    "average_relative_degradation_pct": 0.68,
-    "overall_robustness_score": 99.32,
+    "average_relative_degradation_pct": 1.75,
+    "overall_robustness_score": 98.25,
     "perturbations": {
       "whitespace_normalize": {
         "perturbed_accuracy": 0.7933,
@@ -75,15 +31,15 @@
         "minority_rel_deg_pct": -1.17
       },
       "typo_insertion": {
-        "perturbed_accuracy": 0.7867,
-        "perturbed_macro_f1": 0.7517,
-        "absolute_f1_degradation": 0.0185,
-        "relative_f1_degradation_pct": 2.4,
-        "robustness_retention_pct": 97.6,
+        "perturbed_accuracy": 0.7633,
+        "perturbed_macro_f1": 0.7271,
+        "absolute_f1_degradation": 0.0431,
+        "relative_f1_degradation_pct": 5.6,
+        "robustness_retention_pct": 94.4,
         "minority_clean_f1": 0.7356,
-        "minority_perturbed_f1": 0.6914,
-        "minority_f1_degradation": 0.0442,
-        "minority_rel_deg_pct": 6.01
+        "minority_perturbed_f1": 0.6582,
+        "minority_f1_degradation": 0.0774,
+        "minority_rel_deg_pct": 10.52
       }
     }
   },
@@ -93,8 +49,8 @@
     "clean_accuracy": 0.7967,
     "clean_macro_f1": 0.7665,
     "clean_minority_f1": 0.716,
-    "average_relative_degradation_pct": 1.69,
-    "overall_robustness_score": 98.31,
+    "average_relative_degradation_pct": 1.0,
+    "overall_robustness_score": 99.0,
     "perturbations": {
       "whitespace_normalize": {
         "perturbed_accuracy": 0.7967,
@@ -119,15 +75,15 @@
         "minority_rel_deg_pct": 2.23
       },
       "typo_insertion": {
-        "perturbed_accuracy": 0.7833,
-        "perturbed_macro_f1": 0.7331,
-        "absolute_f1_degradation": 0.0334,
-        "relative_f1_degradation_pct": 4.36,
-        "robustness_retention_pct": 95.64,
+        "perturbed_accuracy": 0.7867,
+        "perturbed_macro_f1": 0.7491,
+        "absolute_f1_degradation": 0.0174,
+        "relative_f1_degradation_pct": 2.27,
+        "robustness_retention_pct": 97.73,
         "minority_clean_f1": 0.716,
-        "minority_perturbed_f1": 0.6301,
-        "minority_f1_degradation": 0.0859,
-        "minority_rel_deg_pct": 12.0
+        "minority_perturbed_f1": 0.6933,
+        "minority_f1_degradation": 0.0227,
+        "minority_rel_deg_pct": 3.17
       }
     }
   },
@@ -137,8 +93,8 @@
     "clean_accuracy": 0.7833,
     "clean_macro_f1": 0.7529,
     "clean_minority_f1": 0.716,
-    "average_relative_degradation_pct": 0.77,
-    "overall_robustness_score": 99.23,
+    "average_relative_degradation_pct": 1.0,
+    "overall_robustness_score": 99.0,
     "perturbations": {
       "whitespace_normalize": {
         "perturbed_accuracy": 0.7833,
@@ -164,14 +120,14 @@
       },
       "typo_insertion": {
         "perturbed_accuracy": 0.7767,
-        "perturbed_macro_f1": 0.7355,
-        "absolute_f1_degradation": 0.0174,
-        "relative_f1_degradation_pct": 2.31,
-        "robustness_retention_pct": 97.69,
+        "perturbed_macro_f1": 0.7304,
+        "absolute_f1_degradation": 0.0225,
+        "relative_f1_degradation_pct": 2.99,
+        "robustness_retention_pct": 97.01,
         "minority_clean_f1": 0.716,
-        "minority_perturbed_f1": 0.6667,
-        "minority_f1_degradation": 0.0493,
-        "minority_rel_deg_pct": 6.89
+        "minority_perturbed_f1": 0.6316,
+        "minority_f1_degradation": 0.0844,
+        "minority_rel_deg_pct": 11.79
       }
     }
   },
@@ -225,8 +181,8 @@
     "clean_accuracy": 0.7667,
     "clean_macro_f1": 0.7253,
     "clean_minority_f1": 0.6237,
-    "average_relative_degradation_pct": -0.15,
-    "overall_robustness_score": 100.15,
+    "average_relative_degradation_pct": 1.09,
+    "overall_robustness_score": 98.91,
     "perturbations": {
       "whitespace_normalize": {
         "perturbed_accuracy": 0.7667,
@@ -251,15 +207,15 @@
         "minority_rel_deg_pct": -0.21
       },
       "typo_insertion": {
-        "perturbed_accuracy": 0.7733,
-        "perturbed_macro_f1": 0.729,
-        "absolute_f1_degradation": -0.0037,
-        "relative_f1_degradation_pct": -0.51,
-        "robustness_retention_pct": 100.51,
+        "perturbed_accuracy": 0.7533,
+        "perturbed_macro_f1": 0.7021,
+        "absolute_f1_degradation": 0.0232,
+        "relative_f1_degradation_pct": 3.2,
+        "robustness_retention_pct": 96.8,
         "minority_clean_f1": 0.6237,
-        "minority_perturbed_f1": 0.6279,
-        "minority_f1_degradation": -0.0042,
-        "minority_rel_deg_pct": -0.67
+        "minority_perturbed_f1": 0.5843,
+        "minority_f1_degradation": 0.0394,
+        "minority_rel_deg_pct": 6.32
       }
     }
   },
@@ -269,8 +225,8 @@
     "clean_accuracy": 0.8867,
     "clean_macro_f1": 0.8684,
     "clean_minority_f1": 0.8043,
-    "average_relative_degradation_pct": 0.19,
-    "overall_robustness_score": 99.81,
+    "average_relative_degradation_pct": 0.4,
+    "overall_robustness_score": 99.6,
     "perturbations": {
       "whitespace_normalize": {
         "perturbed_accuracy": 0.8867,
@@ -296,14 +252,102 @@
       },
       "typo_insertion": {
         "perturbed_accuracy": 0.88,
-        "perturbed_macro_f1": 0.8607,
-        "absolute_f1_degradation": 0.0077,
-        "relative_f1_degradation_pct": 0.89,
-        "robustness_retention_pct": 99.11,
+        "perturbed_macro_f1": 0.8554,
+        "absolute_f1_degradation": 0.013,
+        "relative_f1_degradation_pct": 1.5,
+        "robustness_retention_pct": 98.5,
         "minority_clean_f1": 0.8043,
-        "minority_perturbed_f1": 0.7912,
-        "minority_f1_degradation": 0.0131,
-        "minority_rel_deg_pct": 1.63
+        "minority_perturbed_f1": 0.7692,
+        "minority_f1_degradation": 0.0351,
+        "minority_rel_deg_pct": 4.36
+      }
+    }
+  },
+  "teacher_scibert": {
+    "model_alias": "SciBERT-Teacher",
+    "method": "reference_teacher",
+    "clean_accuracy": 0.8733,
+    "clean_macro_f1": 0.8655,
+    "clean_minority_f1": 0.8602,
+    "average_relative_degradation_pct": 0.19,
+    "overall_robustness_score": 99.81,
+    "perturbations": {
+      "whitespace_normalize": {
+        "perturbed_accuracy": 0.8733,
+        "perturbed_macro_f1": 0.8655,
+        "absolute_f1_degradation": 0.0,
+        "relative_f1_degradation_pct": 0.0,
+        "robustness_retention_pct": 100.0,
+        "minority_clean_f1": 0.8602,
+        "minority_perturbed_f1": 0.8602,
+        "minority_f1_degradation": 0.0,
+        "minority_rel_deg_pct": 0.0
+      },
+      "minor_punctuation": {
+        "perturbed_accuracy": 0.8733,
+        "perturbed_macro_f1": 0.8635,
+        "absolute_f1_degradation": 0.002,
+        "relative_f1_degradation_pct": 0.23,
+        "robustness_retention_pct": 99.77,
+        "minority_clean_f1": 0.8602,
+        "minority_perturbed_f1": 0.8478,
+        "minority_f1_degradation": 0.0124,
+        "minority_rel_deg_pct": 1.44
+      },
+      "typo_insertion": {
+        "perturbed_accuracy": 0.8733,
+        "perturbed_macro_f1": 0.8626,
+        "absolute_f1_degradation": 0.0029,
+        "relative_f1_degradation_pct": 0.34,
+        "robustness_retention_pct": 99.66,
+        "minority_clean_f1": 0.8602,
+        "minority_perturbed_f1": 0.8444,
+        "minority_f1_degradation": 0.0158,
+        "minority_rel_deg_pct": 1.84
+      }
+    }
+  },
+  "student_distilbert_supervised": {
+    "model_alias": "DistilBERT",
+    "method": "supervised",
+    "clean_accuracy": 0.8567,
+    "clean_macro_f1": 0.8335,
+    "clean_minority_f1": 0.7447,
+    "average_relative_degradation_pct": -0.26,
+    "overall_robustness_score": 100.26,
+    "perturbations": {
+      "whitespace_normalize": {
+        "perturbed_accuracy": 0.8567,
+        "perturbed_macro_f1": 0.8335,
+        "absolute_f1_degradation": 0.0,
+        "relative_f1_degradation_pct": 0.0,
+        "robustness_retention_pct": 100.0,
+        "minority_clean_f1": 0.7447,
+        "minority_perturbed_f1": 0.7447,
+        "minority_f1_degradation": 0.0,
+        "minority_rel_deg_pct": 0.0
+      },
+      "minor_punctuation": {
+        "perturbed_accuracy": 0.8633,
+        "perturbed_macro_f1": 0.8391,
+        "absolute_f1_degradation": -0.0056,
+        "relative_f1_degradation_pct": -0.67,
+        "robustness_retention_pct": 100.67,
+        "minority_clean_f1": 0.7447,
+        "minority_perturbed_f1": 0.7447,
+        "minority_f1_degradation": 0.0,
+        "minority_rel_deg_pct": 0.0
+      },
+      "typo_insertion": {
+        "perturbed_accuracy": 0.8567,
+        "perturbed_macro_f1": 0.8344,
+        "absolute_f1_degradation": -0.0009,
+        "relative_f1_degradation_pct": -0.11,
+        "robustness_retention_pct": 100.11,
+        "minority_clean_f1": 0.7447,
+        "minority_perturbed_f1": 0.7527,
+        "minority_f1_degradation": -0.008,
+        "minority_rel_deg_pct": -1.07
       }
     }
   }

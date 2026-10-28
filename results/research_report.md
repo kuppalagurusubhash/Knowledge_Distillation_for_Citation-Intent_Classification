@@ -1,6 +1,6 @@
 # Knowledge Distillation for Citation-Intent Classification: Accuracy–Efficiency Trade-offs and Robustness Preservation
 
-**Generated**: 2026-10-28 14:06:28  
+**Generated**: 2026-10-28 16:10:10  
 **Dataset**: SciCite (Cohan et al., NAACL 2019)  
 **Teacher Model**: SciBERT (`allenai/scibert_scivocab_uncased`)  
 **Student Models**: DistilBERT, BERT-Mini, BERT-Tiny  
@@ -55,19 +55,20 @@ where $M \in \{0, 1\}^{B \times L}$ represents the binary attention mask, strict
 
 | Model Alias | Method | Total Params | Checkpoint (MB) | Test Macro-F1 | Test Acc | Minority F1 (Result) | Latency (ms) | Throughput (ex/s) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **SciBERT-Teacher** | `reference_teacher` | 109,920,771 | 420.2 | **0.8655** | 0.8733 | 0.8602 | 127.71 ms | 7.8 |
-| **BERT-Mini** | `supervised` | 11,171,331 | 43.5 | **0.7702** | 0.7933 | 0.7356 | 8.93 ms | 111.9 |
-| **BERT-Mini** | `logit_distillation` | 11,171,331 | 43.5 | **0.7665** | 0.7967 | 0.7160 | 9.37 ms | 106.7 |
-| **BERT-Mini** | `augmented_distillation` | 11,171,331 | 43.5 | **0.7529** | 0.7833 | 0.7160 | 8.35 ms | 119.8 |
-| **BERT-Tiny** | `logit_distillation` | 4,386,307 | 17.6 | **0.2328** | 0.5367 | 0.0000 | 7.48 ms | 133.7 |
-| **BERT-Mini** | `feature_distillation` | 11,171,331 | 43.5 | **0.7253** | 0.7667 | 0.6237 | 8.69 ms | 115.1 |
-| **DistilBERT** | `logit_distillation` | 66,955,779 | 256.3 | **0.8684** | 0.8867 | 0.8043 | 64.59 ms | 15.5 |
+| **BERT-Mini** | `supervised` | 11,171,331 | 43.5 | **0.7702** | 0.7933 | 0.7356 | 8.82 ms | 113.4 |
+| **BERT-Mini** | `logit_distillation` | 11,171,331 | 43.5 | **0.7665** | 0.7967 | 0.7160 | 10.11 ms | 98.9 |
+| **BERT-Mini** | `augmented_distillation` | 11,171,331 | 43.5 | **0.7529** | 0.7833 | 0.7160 | 8.28 ms | 120.7 |
+| **BERT-Tiny** | `logit_distillation` | 4,386,307 | 17.6 | **0.2328** | 0.5367 | 0.0000 | 2.86 ms | 349.9 |
+| **BERT-Mini** | `feature_distillation` | 11,171,331 | 43.5 | **0.7253** | 0.7667 | 0.6237 | 8.81 ms | 113.5 |
+| **DistilBERT** | `logit_distillation` | 66,955,779 | 256.3 | **0.8684** | 0.8867 | 0.8043 | 68.61 ms | 14.6 |
+| **SciBERT-Teacher** | `reference_teacher` | 109,920,771 | 420.2 | **0.8655** | 0.8733 | 0.8602 | 143.59 ms | 7.0 |
+| **DistilBERT** | `supervised` | 66,955,779 | 256.3 | **0.8335** | 0.8567 | 0.7447 | 65.52 ms | 15.3 |
 
 
 ## 6. Pareto Efficiency & Trade-off Analysis
 
 - **Pareto-Optimal Models (Model Size vs Macro-F1)**: BERT-Mini, BERT-Tiny, DistilBERT
-- **Pareto-Optimal Models (Latency vs Macro-F1)**: BERT-Mini, BERT-Mini, BERT-Tiny, DistilBERT
+- **Pareto-Optimal Models (Latency vs Macro-F1)**: BERT-Mini, BERT-Mini, BERT-Tiny, DistilBERT, DistilBERT
 
 A model is Pareto-optimal if no other configuration achieves strictly superior task accuracy while simultaneously requiring less compute or storage.
 
@@ -75,13 +76,14 @@ A model is Pareto-optimal if no other configuration achieves strictly superior t
 
 | Model Alias | Method | Clean Macro-F1 | Perturbed Macro-F1 (Avg) | Relative Degradation (%) | Robustness Score (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **SciBERT-Teacher** | `reference_teacher` | 0.8655 | 99.53% | 0.47% | **99.53%** |
-| **BERT-Mini** | `supervised` | 0.7702 | 99.32% | 0.68% | **99.32%** |
-| **BERT-Mini** | `logit_distillation` | 0.7665 | 98.31% | 1.69% | **98.31%** |
-| **BERT-Mini** | `augmented_distillation` | 0.7529 | 99.23% | 0.77% | **99.23%** |
+| **BERT-Mini** | `supervised` | 0.7702 | 98.25% | 1.75% | **98.25%** |
+| **BERT-Mini** | `logit_distillation` | 0.7665 | 99.00% | 1.00% | **99.00%** |
+| **BERT-Mini** | `augmented_distillation` | 0.7529 | 99.00% | 1.00% | **99.00%** |
 | **BERT-Tiny** | `logit_distillation` | 0.2328 | 100.00% | 0.00% | **100.00%** |
-| **BERT-Mini** | `feature_distillation` | 0.7253 | 100.15% | -0.15% | **100.15%** |
-| **DistilBERT** | `logit_distillation` | 0.8684 | 99.81% | 0.19% | **99.81%** |
+| **BERT-Mini** | `feature_distillation` | 0.7253 | 98.91% | 1.09% | **98.91%** |
+| **DistilBERT** | `logit_distillation` | 0.8684 | 99.60% | 0.40% | **99.60%** |
+| **SciBERT-Teacher** | `reference_teacher` | 0.8655 | 99.81% | 0.19% | **99.81%** |
+| **DistilBERT** | `supervised` | 0.8335 | 100.26% | -0.26% | **100.26%** |
 
 
 ## 8. Conclusions and Reproducibility

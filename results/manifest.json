@@ -1,19 +1,6 @@
 {
   "experiments": [
     {
-      "experiment_id": "teacher_scibert",
-      "model_alias": "SciBERT-Teacher",
-      "model_type": "teacher",
-      "method": "reference_teacher",
-      "test_accuracy": 0.8733,
-      "test_macro_f1": 0.8655,
-      "minority_f1": 0.8602,
-      "total_params": 109920771,
-      "checkpoint_size_mb": 420.24,
-      "checkpoint_dir": "artifacts\\checkpoints\\teacher_scibert",
-      "status": "completed"
-    },
-    {
       "experiment_id": "student_bert_mini_supervised",
       "model_alias": "BERT-Mini",
       "model_type": "student",
@@ -95,6 +82,33 @@
       "total_params": 66955779,
       "checkpoint_size_mb": 256.33,
       "checkpoint_dir": "artifacts\\checkpoints\\student_distilbert_logit_distillation",
+      "status": "completed"
+    },
+    {
+      "experiment_id": "teacher_scibert",
+      "model_alias": "SciBERT-Teacher",
+      "model_type": "teacher",
+      "method": "reference_teacher",
+      "test_accuracy": 0.8733,
+      "test_macro_f1": 0.8655,
+      "minority_f1": 0.8602,
+      "total_params": 109920771,
+      "checkpoint_size_mb": 420.24,
+      "checkpoint_dir": "artifacts\\checkpoints\\teacher_scibert",
+      "status": "completed"
+    },
+    {
+      "experiment_id": "student_distilbert_supervised",
+      "model_alias": "DistilBERT",
+      "model_type": "student",
+      "student_key": "distilbert",
+      "method": "supervised",
+      "test_accuracy": 0.8567,
+      "test_macro_f1": 0.8335,
+      "minority_f1": 0.7447,
+      "total_params": 66955779,
+      "checkpoint_size_mb": 256.33,
+      "checkpoint_dir": "artifacts\\checkpoints\\student_distilbert_supervised",
       "status": "completed"
     }
   ]

@@ -46,11 +46,14 @@ def evaluate_model(
             if token_type_ids is not None:
                 token_type_ids = token_type_ids.to(device)
 
-            outputs = model(
-                input_ids=input_ids,
-                attention_mask=attention_mask,
-                token_type_ids=token_type_ids,
-            )
+            kwargs = {
+                "input_ids": input_ids,
+                "attention_mask": attention_mask,
+            }
+            if token_type_ids is not None:
+                kwargs["token_type_ids"] = token_type_ids
+
+            outputs = model(**kwargs)
             logits = outputs["logits"]
             loss = criterion(logits, labels)
 
